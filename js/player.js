@@ -163,27 +163,27 @@ class AudioPlayer {
 // Playlists par page
 const playlists = {
     default: [
-        { title: 'Parle-moi d\'autre chose', src: '/musics/Parle-moi_d_autre_chose.mp3' },
-        { title: 'Avec les anges', src: '/musics/Avec_les_anges.mp3' },
-        { title: 'Ça tourne pas rond', src: '/musics/Ca_tourne_pas_rond.mp3' },
-        { title: 'Le danger de la valse', src: '/musics/Le_danger_de_la_valse.mp3' },
-        { title: 'Busy Line', src: '/musics/Busy_line.mp3' },
-        { title: 'Under a blanket of blue', src: '/musics/Under_a_blanket_of_blue.mp3' },
-        { title: 'Tu verras', src: '/musics/Tu_verras.mp3' }
+        { title: 'Parle-moi d\'autre chose', src: 'musics/Parle-moi_d_autre_chose.mp3' },
+        { title: 'Avec les anges', src: 'musics/Avec_les_anges.mp3' },
+        { title: 'Ça tourne pas rond', src: 'musics/Ca_tourne_pas_rond.mp3' },
+        { title: 'Le danger de la valse', src: 'musics/Le_danger_de_la_valse.mp3' },
+        { title: 'Busy Line', src: 'musics/Busy_line.mp3' },
+        { title: 'Under a blanket of blue', src: 'musics/Under_a_blanket_of_blue.mp3' },
+        { title: 'Tu verras', src: 'musics/Tu_verras.mp3' }
     ],
     offre1: [
-        { title: 'Parle-moi d\'autre chose', src: '/musics/Parle-moi_d_autre_chose.mp3' },
-        { title: 'Avec les anges', src: '/musics/Avec_les_anges.mp3' },
-        { title: 'Ça tourne pas rond', src: '/musics/Ca_tourne_pas_rond.mp3' },
-        { title: 'Le danger de la valse', src: '/musics/Le_danger_de_la_valse.mp3' }
+        { title: 'Parle-moi d\'autre chose', src: 'musics/Parle-moi_d_autre_chose.mp3' },
+        { title: 'Avec les anges', src: 'musics/Avec_les_anges.mp3' },
+        { title: 'Ça tourne pas rond', src: 'musics/Ca_tourne_pas_rond.mp3' },
+        { title: 'Le danger de la valse', src: 'musics/Le_danger_de_la_valse.mp3' }
     ],
     offre2: [
-        { title: 'Busy Line', src: '/musics/Busy_line.mp3' },
-        { title: 'Under a blanket of blue', src: '/musics/Under_a_blanket_of_blue.mp3' }
+        { title: 'Busy Line', src: 'musics/Busy_line.mp3' },
+        { title: 'Under a blanket of blue', src: 'musics/Under_a_blanket_of_blue.mp3' }
     ],
     offre3: [
-        { title: 'Parle-moi d\'autre chose', src: '/musics/Parle-moi_d_autre_chose.mp3' },
-        { title: 'Tu verras', src: '/musics/Tu_verras.mp3' }
+        { title: 'Parle-moi d\'autre chose', src: 'musics/Parle-moi_d_autre_chose.mp3' },
+        { title: 'Tu verras', src: 'musics/Tu_verras.mp3' }
     ]
 };
 

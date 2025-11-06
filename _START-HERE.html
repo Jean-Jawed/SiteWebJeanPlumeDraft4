@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean-Plume - Navigation du Projet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #667eea;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .warning h3 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+        
+        .warning ul {
+            margin-left: 1.5rem;
+            color: #856404;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .card a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: block;
+        }
+        
+        .card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .file-list {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        
+        .file-list h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .file-list ul {
+            list-style: none;
+        }
+        
+        .file-list li {
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            background-color: white;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .code {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Jean-Plume - Navigation du Projet</h1>
+        <p class="subtitle">Site web complet développé en HTML, CSS et JavaScript</p>
+        
+        <div class="warning">
+            <h3>⚠️ Important - Fichiers manquants</h3>
+            <p>Pour que le site fonctionne complètement, vous devez ajouter :</p>
+            <ul>
+                <li><strong>Images</strong> dans le dossier <code>/images/</code> : logo.png, back1.jpg, Image2.png à Image5.png, gwen.png, noemie.png</li>
+                <li><strong>Fichiers audio</strong> dans le dossier <code>/musics/</code> : 7 fichiers MP3 (voir README)</li>
+                <li><strong>Favicon</strong> : favicon.ico à la racine</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>📄 Pages principales</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🚪</div>
+                    <a href="index.html" target="_blank">Landing Page</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🏠</div>
+                    <a href="accueil.html" target="_blank">Accueil</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🎭</div>
+                    <a href="offre1.html" target="_blank">Chanson Française</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🎷</div>
+                    <a href="offre2.html" target="_blank">Swing</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🌴</div>
+                    <a href="offre3.html" target="_blank">Latin</a>
+                </div>
+                <div class="card">
+                    <div class="icon">📹</div>
+                    <a href="videos.html" target="_blank">Vidéos</a>
+                </div>
+                <div class="card">
+                    <div class="icon">🎤</div>
+                    <a href="concerts.html" target="_blank">Concerts</a>
+                </div>
+                <div class="card">
+                    <div class="icon">👥</div>
+                    <a href="apropos.html" target="_blank">À propos</a>
+                </div>
+                <div class="card">
+                    <div class="icon">📧</div>
+                    <a href="contact.html" target="_blank">Contact</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📁 Structure du projet</h2>
+            <div class="file-list">
+                <h3>Fichiers HTML (9)</h3>
+                <ul>
+                    <li>✅ index.html - Landing page avec animation</li>
+                    <li>✅ accueil.html - Page d'accueil principale</li>
+                    <li>✅ offre1.html - Chanson Française (Art Déco)</li>
+                    <li>✅ offre2.html - Swing (Jazz 1940s)</li>
+                    <li>✅ offre3.html - Latin (Festif)</li>
+                    <li>✅ videos.html - Galerie YouTube</li>
+                    <li>✅ concerts.html - Timeline concerts</li>
+                    <li>✅ apropos.html - Biographies</li>
+                    <li>✅ contact.html - Formulaire contact</li>
+                </ul>
+            </div>
+            
+            <div class="file-list">
+                <h3>Fichiers CSS (4)</h3>
+                <ul>
+                    <li>✅ css/main.css - Styles neutres bleu ciel/blanc</li>
+                    <li>✅ css/offre1.css - Art Déco vintage</li>
+                    <li>✅ css/offre2.css - Jazz années 1940</li>
+                    <li>✅ css/offre3.css - Latin festif</li>
+                </ul>
+            </div>
+            
+            <div class="file-list">
+                <h3>Fichiers JavaScript (3)</h3>
+                <ul>
+                    <li>✅ js/main.js - Fonctionnalités communes</li>
+                    <li>✅ js/player.js - Player audio permanent</li>
+                    <li>✅ js/animations.js - Animations spéciales</li>
+                </ul>
+            </div>
+            
+            <div class="file-list">
+                <h3>À ajouter par vous</h3>
+                <ul>
+                    <li>⚠️ images/ - 8 images (logo, photos, carrousel)</li>
+                    <li>⚠️ musics/ - 7 fichiers MP3</li>
+                    <li>⚠️ favicon.ico</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Démarrage rapide</h2>
+            <p style="margin-bottom: 1rem;">Pour tester le site en local :</p>
+            <div class="code">
+                # Python
+                python -m http.server 8000
+                
+                # Node.js
+                npx http-server
+                
+                # VS Code
+                Extension "Live Server"
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>✨ Fonctionnalités</h2>
+            <ul style="line-height: 2; margin-left: 2rem;">
+                <li>✅ Design responsive (mobile/tablet/desktop)</li>
+                <li>✅ 3 esthétiques thématiques distinctes pour les offres</li>
+                <li>✅ Player audio permanent avec playlist adaptative</li>
+                <li>✅ Animations subtiles et élégantes</li>
+                <li>✅ Landing page interactive</li>
+                <li>✅ Carrousel d'images automatique</li>
+                <li>✅ Menu burger pour mobile</li>
+                <li>✅ Intégration YouTube</li>
+                <li>✅ Timeline de concerts interactive</li>
+                <li>✅ Formulaire de contact fonctionnel</li>
+                <li>✅ Code propre et commenté</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>📖 Documentation</h2>
+            <p>Consultez le fichier <strong>README.md</strong> pour toutes les informations détaillées sur :</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li>Structure complète du projet</li>
+                <li>Installation et configuration</li>
+                <li>Personnalisation des couleurs et contenus</li>
+                <li>Compatibilité navigateurs</li>
+                <li>Optimisation et performance</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee;">
+            <p style="color: #666;">Développé avec ❤️ pour Jean-Plume</p>
+            <p style="color: #999; font-size: 0.9rem;">Par Javed - 2025</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean-Plume - À propos</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .apropos-wrapper {
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        #notes-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+        
+        .apropos-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .apropos-header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+        }
+        
+        .apropos-header h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+        
+        .apropos-header p {
+            font-size: 1.3rem;
+            color: var(--color-text-light);
+        }
+        
+        .artistes-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 4rem;
+            margin: 4rem 0;
+        }
+        
+        .artiste-card {
+            background-color: var(--color-white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .artiste-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .artiste-photo-container {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--color-primary);
+            box-shadow: 0 5px 20px rgba(135, 206, 235, 0.3);
+        }
+        
+        .artiste-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .artiste-name {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .artiste-role {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        
+        .artiste-bio {
+            text-align: justify;
+            line-height: 1.8;
+            color: var(--color-text);
+            font-size: 1rem;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .artistes-section {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .apropos-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .artiste-photo-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body class="apropos-page">
+    <!-- Canvas pour l'animation -->
+    <canvas id="notes-canvas"></canvas>
+    
+    <div class="apropos-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="header-container">
+                <div class="logo-container">
+                    <a href="accueil.html">
+                        <img src="/images/logo.png" alt="Jean-Plume" class="logo">
+                    </a>
+                </div>
+                
+                <nav>
+                    <div class="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="accueil.html#nos-offres">Nos Offres</a></li>
+                        <li><a href="videos.html">Vidéos</a></li>
+                        <li><a href="concerts.html">Concerts</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="social-links">
+                    <a href="https://soundcloud.com/user-547697242-761378935/sets/jean-plume-gwenael-ollivier-et/s-EE6bNDvnyXI" target="_blank" title="SoundCloud">
+                        🎵
+                    </a>
+                    <a href="https://youtube.com/@jeanplume3174" target="_blank" title="YouTube">
+                        ▶️
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main -->
+        <main class="apropos-content">
+            <div class="container">
+                <div class="apropos-header">
+                    <h1>À propos de Jean-Plume</h1>
+                    <p>Rencontrez les artistes derrière la musique</p>
+                </div>
+                
+                <section class="artistes-section">
+                    <!-- Gwen Ollivier -->
+                    <article class="artiste-card">
+                        <div class="artiste-photo-container">
+                            <img src="/images/gwen.png" alt="Gwen Ollivier" class="artiste-photo">
+                        </div>
+                        <h2 class="artiste-name">Gwen Ollivier</h2>
+                        <p class="artiste-role">🎹 Pianiste</p>
+                        <div class="artiste-bio">
+                            Pianiste éclectique, Gwenaël Ollivier est âgé de 20 ans lorsqu'il part étudier 
+                            la musique à Cuba durant une année. De retour en France, il décide de se perfectionner 
+                            en jazz tout en intégrant différents ensembles latins. Il crée à ce moment là le 
+                            "Trio Sancocho". Des rencontres le poussent ensuite à se plonger en Europe de l'Est, 
+                            il circule alors entre les musiques tziganes et le swing de Django Reinhardt. Depuis 
+                            15 ans, il se spécialise dans le swing des années 30-40, arpentant à travers le monde, 
+                            avec le "Hot Sugar Band" ou encore le trio "Ginger Stompers". Attiré par la composition, 
+                            il crée de nouveaux groupes interprétant des morceaux originaux : "Control Zebre", 
+                            "Moritz trio", et aujourd'hui "Jean Plume".
+                        </div>
+                    </article>
+                    
+                    <!-- Noémie Nael -->
+                    <article class="artiste-card">
+                        <div class="artiste-photo-container">
+                            <img src="/images/noemie.png" alt="Noémie Nael" class="artiste-photo">
+                        </div>
+                        <h2 class="artiste-name">Noémie Nael</h2>
+                        <p class="artiste-role">🎤 Chanteuse</p>
+                        <div class="artiste-bio">
+                            Après une formation de comédienne, Noémie Nael participe à la création de différents 
+                            spectacles au sein de plusieurs collectifs et compagnies. Elle crée elle-même la 
+                            compagnie DOÏNA, centrée sur la recherche théâtrale et musicale internationale. Grâce 
+                            à sa rencontre avec le pianiste et compositeur Joël Simon, elle s'ouvre à la voix et 
+                            écrit ses propres chansons. En 2017, son parcours de chanteuse prend son élan avec la 
+                            création de SAMAÏA, trio polyphonique a capella, reprenant et arrangeant des chants 
+                            traditionnels venant d'Europe et d'Europe centrale jusqu'en Anatolie. Le duo Jean Plume, 
+                            créé en 2020, apporte de nouvelles couleurs à sa palette, en y ajoutant des touches de 
+                            swing et de musiques latines.
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            <p>Jean-Plume, 2025. By Javed</p>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/player.js"></script>
+    <script src="/js/animations.js"></script>
+</body>
+</html>

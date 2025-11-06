@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean-Plume - Contact</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .contact-header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-white) 100%);
+        }
+        
+        .contact-header h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-header p {
+            font-size: 1.3rem;
+            color: var(--color-text-light);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin: 4rem 0;
+        }
+        
+        .contact-info {
+            background-color: var(--color-white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--color-background);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background-color: var(--color-primary-light);
+            transform: translateX(10px);
+        }
+        
+        .contact-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item p {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+        }
+        
+        .contact-item a {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+        
+        .contact-form {
+            background-color: var(--color-white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--color-primary-light);
+            border-radius: 10px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background-color: var(--color-primary);
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #6bb8d8;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
+        }
+        
+        .social-contact {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .social-contact h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+        
+        .social-contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .social-contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background-color: var(--color-primary-light);
+            color: var(--color-text);
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .social-contact-links a:hover {
+            background-color: var(--color-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        @media screen and (max-width: 968px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .social-contact-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="accueil.html">
+                    <img src="/images/logo.png" alt="Jean-Plume" class="logo">
+                </a>
+            </div>
+            
+            <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="accueil.html#nos-offres">Nos Offres</a></li>
+                    <li><a href="videos.html">Vidéos</a></li>
+                    <li><a href="concerts.html">Concerts</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="social-links">
+                <a href="https://soundcloud.com/user-547697242-761378935/sets/jean-plume-gwenael-ollivier-et/s-EE6bNDvnyXI" target="_blank" title="SoundCloud">
+                    🎵
+                </a>
+                <a href="https://youtube.com/@jeanplume3174" target="_blank" title="YouTube">
+                    ▶️
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main -->
+    <main>
+        <div class="contact-header">
+            <h1>Contactez-nous</h1>
+            <p>Nous serons ravis de répondre à vos questions</p>
+        </div>
+        
+        <div class="container">
+            <div class="contact-content">
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h2>Nos Coordonnées</h2>
+                    
+                    <div class="contact-item">
+                        <h3>🎹 Gwen Ollivier</h3>
+                        <p>Téléphone : <a href="tel:0699884953">06 99 88 49 53</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>🎤 Noémie Nael</h3>
+                        <p>Téléphone : <a href="tel:0676501319">06 76 50 13 19</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:jeanplume.musique@gmail.com">jeanplume.musique@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-contact-links">
+                            <a href="https://soundcloud.com/user-547697242-761378935/sets/jean-plume-gwenael-ollivier-et/s-EE6bNDvnyXI" target="_blank">
+                                🎵 SoundCloud
+                            </a>
+                            <a href="https://youtube.com/@jeanplume3174" target="_blank">
+                                ▶️ YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+                    <h2>Envoyez-nous un message</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>Jean-Plume, 2025. By Javed</p>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/player.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean-Plume - Bienvenue</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .landing-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/back1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .landing-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .landing-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+        
+        .logo-landing {
+            width: 200px;
+            height: auto;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease;
+        }
+        
+        .landing-title {
+            font-size: 6rem;
+            font-weight: 700;
+            color: #FF8C42;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 2s ease 0.5s both;
+            letter-spacing: 5px;
+        }
+        
+        .landing-subtitle {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 300;
+            animation: fadeIn 2s ease 1s both;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Notes de musique animées */
+        .music-note {
+            position: absolute;
+            color: rgba(255, 140, 66, 0.5);
+            pointer-events: none;
+            z-index: 0;
+            animation: float-note 5s ease-in-out infinite;
+            transition: transform 0.3s ease-out;
+        }
+        
+        @keyframes float-note {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+                opacity: 0.7;
+            }
+        }
+        
+        /* Effet de pulsation */
+        .landing-title {
+            animation: fadeIn 2s ease 0.5s both, pulse 3s ease-in-out 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .landing-title {
+                font-size: 3rem;
+                letter-spacing: 3px;
+            }
+            
+            .landing-subtitle {
+                font-size: 1.2rem;
+                padding: 0 2rem;
+            }
+            
+            .logo-landing {
+                width: 150px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="landing-page">
+    <div class="landing-wrapper">
+        <div class="landing-overlay"></div>
+        <div class="landing-content">
+            <img src="/images/logo.png" alt="Jean-Plume Logo" class="logo-landing">
+            <h1 class="landing-title">Jean-Plume</h1>
+            <p class="landing-subtitle">Cliquez ici pour commencer l'aventure</p>
+        </div>
+    </div>
+    
+    <script src="/js/animations.js"></script>
+</body>
+</html>

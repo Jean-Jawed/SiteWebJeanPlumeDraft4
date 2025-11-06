@@ -1,0 +1,332 @@
+/* === OFFRE 2 - SWING === */
+/* Style Jazz années 1940 */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300;400;600;700&display=swap');
+
+:root {
+    --offre2-bleu: #2C3E50;
+    --offre2-orange: #E67E22;
+    --offre2-blanc: #ECF0F1;
+    --offre2-noir: #000000;
+}
+
+body {
+    background-color: var(--offre2-bleu);
+    color: var(--offre2-blanc);
+    font-family: 'Roboto Slab', serif;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(230, 126, 34, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(230, 126, 34, 0.1) 0%, transparent 50%);
+}
+
+/* Header override */
+header {
+    background-color: var(--offre2-noir);
+    border-bottom: 3px solid var(--offre2-orange);
+}
+
+nav a {
+    color: var(--offre2-blanc);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: var(--offre2-orange);
+}
+
+.social-links a {
+    background-color: var(--offre2-orange);
+    color: var(--offre2-noir);
+}
+
+.social-links a:hover {
+    background-color: var(--offre2-blanc);
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Hero */
+.offre-hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--offre2-noir) 0%, var(--offre2-bleu) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.offre-hero::before {
+    content: '♪ ♫ ♪';
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    font-size: 3rem;
+    color: var(--offre2-orange);
+    opacity: 0.3;
+    letter-spacing: 4rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.offre-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--offre2-orange);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 0px var(--offre2-noir);
+    animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+.offre-hero .subtitle {
+    font-size: 1.8rem;
+    color: var(--offre2-blanc);
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+/* Vinyl decoration */
+.vinyl-deco {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(circle at center, var(--offre2-noir) 30%, transparent 30%),
+        radial-gradient(circle at center, var(--offre2-orange) 31%, var(--offre2-noir) 32%, var(--offre2-noir) 98%, var(--offre2-orange) 99%);
+    position: absolute;
+    opacity: 0.2;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.vinyl-deco.left {
+    top: 10%;
+    left: 5%;
+}
+
+.vinyl-deco.right {
+    bottom: 10%;
+    right: 5%;
+}
+
+/* Introduction */
+.offre-intro {
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.2;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--offre2-orange);
+    border-right: 5px solid var(--offre2-orange);
+}
+
+/* Playlist section */
+.playlist-section {
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.playlist-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    color: var(--offre2-orange);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 3px 3px 0px var(--offre2-noir);
+}
+
+.song-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.song-item {
+    background: linear-gradient(135deg, var(--offre2-noir) 0%, var(--offre2-bleu) 100%);
+    border: 3px solid var(--offre2-orange);
+    border-radius: 50px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.song-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(230, 126, 34, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.song-item:hover::before {
+    left: 100%;
+}
+
+.song-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.4);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(230, 126, 34, 0.4); }
+    50% { box-shadow: 0 10px 40px rgba(230, 126, 34, 0.6); }
+}
+
+.song-item.playing {
+    background: linear-gradient(135deg, var(--offre2-orange) 0%, var(--offre2-noir) 100%);
+    border: 4px solid var(--offre2-blanc);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.song-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--offre2-orange);
+    min-width: 60px;
+    text-align: center;
+    text-shadow: 2px 2px 0px var(--offre2-noir);
+}
+
+.song-item.playing .song-number {
+    color: var(--offre2-blanc);
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--offre2-blanc);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.song-duration {
+    font-size: 1rem;
+    color: var(--offre2-orange);
+    font-weight: 300;
+}
+
+.play-icon {
+    font-size: 2.5rem;
+    color: var(--offre2-orange);
+    min-width: 50px;
+    text-align: center;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.song-item.playing .play-icon {
+    color: var(--offre2-blanc);
+}
+
+/* Jazz instruments silhouettes */
+.instrument-silhouette {
+    position: fixed;
+    opacity: 0.1;
+    font-size: 10rem;
+    color: var(--offre2-orange);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Buttons */
+.offre2-btn {
+    padding: 1.2rem 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--offre2-noir);
+    color: var(--offre2-orange);
+    border: 3px solid var(--offre2-orange);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.offre2-btn:hover {
+    background-color: var(--offre2-orange);
+    color: var(--offre2-noir);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(230, 126, 34, 0.5);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Footer */
+footer {
+    background-color: var(--offre2-noir);
+    border-top: 3px solid var(--offre2-orange);
+    color: var(--offre2-blanc);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .offre-hero h1 {
+        font-size: 3rem;
+        letter-spacing: 5px;
+    }
+    
+    .offre-hero .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .vinyl-deco {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .playlist-section h2 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+    
+    .song-item {
+        padding: 1.5rem;
+        border-radius: 30px;
+    }
+    
+    .song-number {
+        font-size: 2rem;
+    }
+    
+    .song-title {
+        font-size: 1.5rem;
+    }
+}

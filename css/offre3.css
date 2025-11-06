@@ -1,0 +1,424 @@
+/* === OFFRE 3 - LATIN === */
+/* Style Latin - Chaleur et énergie festive */
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+    --offre3-rouge: #C1543B;
+    --offre3-turquoise: #4ECDC4;
+    --offre3-jaune: #F7DC6F;
+    --offre3-corail: #E74C3C;
+}
+
+body {
+    background: linear-gradient(135deg, var(--offre3-rouge) 0%, var(--offre3-corail) 100%);
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    background-attachment: fixed;
+}
+
+/* Motifs géométriques de fond */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(78, 205, 196, 0.1) 35px, rgba(78, 205, 196, 0.1) 70px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(247, 220, 111, 0.1) 35px, rgba(247, 220, 111, 0.1) 70px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Header override */
+header {
+    background: linear-gradient(135deg, var(--offre3-rouge) 0%, var(--offre3-corail) 100%);
+    border-bottom: 4px solid var(--offre3-jaune);
+    position: relative;
+    z-index: 10;
+}
+
+nav a {
+    color: #FFFFFF;
+    font-family: 'Righteous', sans-serif;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--offre3-jaune);
+    transform: scale(1.1);
+}
+
+.social-links a {
+    background: linear-gradient(135deg, var(--offre3-turquoise) 0%, var(--offre3-jaune) 100%);
+    color: var(--offre3-rouge);
+}
+
+.social-links a:hover {
+    transform: rotate(15deg) scale(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main wrapper */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero */
+.offre-hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, rgba(193, 84, 59, 0.9) 0%, rgba(231, 76, 60, 0.9) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soleil décoratif */
+.sun-deco {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--offre3-jaune) 0%, var(--offre3-corail) 100%);
+    box-shadow: 0 0 50px rgba(247, 220, 111, 0.6);
+    animation: pulse-sun 3s ease-in-out infinite;
+}
+
+@keyframes pulse-sun {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+.sun-deco.top-left {
+    top: -75px;
+    left: -75px;
+}
+
+.sun-deco.bottom-right {
+    bottom: -75px;
+    right: -75px;
+}
+
+/* Vagues décoratives */
+.wave-deco {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background: 
+        radial-gradient(ellipse at center, rgba(78, 205, 196, 0.3) 0%, transparent 50%);
+    animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateX(-25%); }
+    50% { transform: translateX(25%); }
+}
+
+.wave-deco.top {
+    top: 0;
+}
+
+.wave-deco.bottom {
+    bottom: 0;
+    animation-delay: 2s;
+}
+
+.offre-hero h1 {
+    font-family: 'Righteous', sans-serif;
+    font-size: 5rem;
+    color: var(--offre3-jaune);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    text-shadow: 
+        3px 3px 0px var(--offre3-rouge),
+        6px 6px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    animation: salsa 2s ease-in-out infinite;
+}
+
+@keyframes salsa {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+.offre-hero .subtitle {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Fleurs tropicales décoratives */
+.flower-deco {
+    position: absolute;
+    font-size: 4rem;
+    animation: float-flower 5s ease-in-out infinite;
+    opacity: 0.3;
+}
+
+@keyframes float-flower {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+}
+
+.flower-deco:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.flower-deco:nth-child(2) {
+    top: 60%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+/* Introduction */
+.offre-intro {
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.2;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 3px solid var(--offre3-turquoise);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Playlist section */
+.playlist-section {
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.playlist-section h2 {
+    font-family: 'Righteous', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    color: var(--offre3-jaune);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 
+        3px 3px 0px var(--offre3-corail),
+        6px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.song-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.song-item {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.8) 0%, rgba(193, 84, 59, 0.8) 100%);
+    border: 3px solid var(--offre3-jaune);
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.song-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(247, 220, 111, 0.3) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.song-item:hover {
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--offre3-turquoise);
+}
+
+.song-item.playing {
+    background: linear-gradient(135deg, var(--offre3-jaune) 0%, var(--offre3-corail) 100%);
+    border: 4px solid #FFFFFF;
+    animation: latin-pulse 1s ease-in-out infinite;
+}
+
+@keyframes latin-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(247, 220, 111, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(247, 220, 111, 0.9);
+    }
+}
+
+.song-number {
+    font-family: 'Righteous', sans-serif;
+    font-size: 3rem;
+    color: var(--offre3-jaune);
+    min-width: 70px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-item.playing .song-number {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--offre3-rouge);
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-title {
+    font-family: 'Righteous', sans-serif;
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.song-duration {
+    font-size: 1rem;
+    color: var(--offre3-jaune);
+    font-weight: 600;
+}
+
+.play-icon {
+    font-size: 3rem;
+    color: var(--offre3-jaune);
+    min-width: 60px;
+    text-align: center;
+    animation: bounce-latin 1.5s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes bounce-latin {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-10px) scale(1.1); }
+    75% { transform: translateY(-5px) scale(1.05); }
+}
+
+.song-item.playing .play-icon {
+    color: #FFFFFF;
+}
+
+/* Buttons */
+.offre3-btn {
+    padding: 1.2rem 3rem;
+    font-family: 'Righteous', sans-serif;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, var(--offre3-turquoise) 0%, var(--offre3-jaune) 100%);
+    color: var(--offre3-rouge);
+    border: 3px solid #FFFFFF;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+.offre3-btn:hover {
+    background: linear-gradient(135deg, var(--offre3-jaune) 0%, var(--offre3-corail) 100%);
+    color: #FFFFFF;
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--offre3-rouge) 0%, var(--offre3-corail) 100%);
+    border-top: 4px solid var(--offre3-jaune);
+    color: #FFFFFF;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .offre-hero h1 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+    
+    .offre-hero .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .sun-deco {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .playlist-section h2 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+    
+    .song-item {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .song-number {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .song-title {
+        font-size: 1.5rem;
+    }
+    
+    .flower-deco {
+        font-size: 2rem;
+    }
+}

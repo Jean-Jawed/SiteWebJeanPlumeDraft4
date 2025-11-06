@@ -1,0 +1,109 @@
+===========================================
+FICHIERS À AJOUTER POUR FINALISER LE SITE
+===========================================
+
+📁 DOSSIER /images/ (à créer si nécessaire)
+-------------------------------------------
+Vous devez ajouter les images suivantes :
+
+1. logo.png
+   - Logo du groupe Jean-Plume
+   - Format : PNG avec transparence
+   - Dimensions recommandées : 200x200 px minimum
+
+2. back1.jpg
+   - Photo de fond pour la landing page
+   - Format : JPEG noir & blanc
+   - Dimensions recommandées : 1920x1080 px minimum
+   - Qualité : Haute résolution
+
+3. Image2.png
+   - Photo hero pour l'accueil + carrousel
+   - Format : PNG ou JPEG
+   - Dimensions recommandées : 1200x800 px
+
+4. Image3.png
+   - Photo carrousel #2
+   - Format : PNG ou JPEG
+   - Dimensions recommandées : 1200x800 px
+
+5. Image4.png
+   - Photo carrousel #3
+   - Format : PNG ou JPEG
+   - Dimensions recommandées : 1200x800 px
+
+6. Image5.png
+   - Photo carrousel #4
+   - Format : PNG ou JPEG
+   - Dimensions recommandées : 1200x800 px
+
+7. gwen.png
+   - Photo de Gwen Ollivier (pianiste)
+   - Format : PNG ou JPEG
+   - Dimensions recommandées : 400x400 px (format carré)
+
+8. noemie.png
+   - Photo de Noémie Nael (chanteuse)
+   - Format : PNG ou JPEG
+   - Dimensions recommandées : 400x400 px (format carré)
+
+
+📁 DOSSIER /musics/ (à créer si nécessaire)
+--------------------------------------------
+Vous devez ajouter les fichiers audio suivants :
+
+OFFRE 1 - CHANSON FRANÇAISE :
+1. Parle-moi_d_autre_chose.mp3
+2. Avec_les_anges.mp3
+3. Ca_tourne_pas_rond.mp3
+4. Le_danger_de_la_valse.mp3
+
+OFFRE 2 - SWING :
+5. Busy_line.mp3
+6. Under_a_blanket_of_blue.mp3
+
+OFFRE 3 - LATIN :
+7. Tu_verras.mp3
+
+Format audio recommandé :
+- Format : MP3
+- Qualité : 192-256 kbps
+- Fréquence : 44.1 kHz
+
+
+📄 FICHIER RACINE
+-----------------
+favicon.ico
+- Icône du site (16x16 et 32x32)
+- Format : ICO
+- Vous pouvez utiliser un convertisseur en ligne pour créer un .ico depuis une image
+
+
+🛠️ COMMENT AJOUTER CES FICHIERS ?
+-----------------------------------
+
+1. Créez les dossiers s'ils n'existent pas :
+   - /images/
+   - /musics/
+
+2. Placez vos fichiers dans les dossiers correspondants
+
+3. Assurez-vous que les noms de fichiers correspondent EXACTEMENT
+   (respectez les majuscules/minuscules et les underscores)
+
+4. Vérifiez que les fichiers sont accessibles via votre serveur web
+
+
+✅ VÉRIFICATION
+---------------
+Une fois tous les fichiers ajoutés :
+1. Ouvrez NAVIGATION.html dans votre navigateur
+2. Testez chaque page pour vérifier que tout s'affiche correctement
+3. Vérifiez que le player audio fonctionne
+4. Testez la navigation sur mobile
+
+
+📞 BESOIN D'AIDE ?
+------------------
+Contact : jeanplume.musique@gmail.com
+

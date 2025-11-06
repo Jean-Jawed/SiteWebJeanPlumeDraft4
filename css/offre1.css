@@ -1,0 +1,277 @@
+/* === OFFRE 1 - CHANSON FRANÇAISE === */
+/* Style Art Déco - Années 1920 */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap');
+
+:root {
+    --offre1-noir: #1A1A1A;
+    --offre1-or: #D4AF37;
+    --offre1-bordeaux: #6B2737;
+    --offre1-creme: #F5F5DC;
+}
+
+body {
+    background-color: var(--offre1-noir);
+    color: var(--offre1-creme);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Header override */
+header {
+    background-color: var(--offre1-noir);
+    border-bottom: 2px solid var(--offre1-or);
+}
+
+nav a {
+    color: var(--offre1-creme);
+    font-family: 'Playfair Display', serif;
+}
+
+nav a:hover {
+    color: var(--offre1-or);
+}
+
+.social-links a {
+    background-color: var(--offre1-bordeaux);
+    color: var(--offre1-or);
+}
+
+.social-links a:hover {
+    background-color: var(--offre1-or);
+    color: var(--offre1-noir);
+}
+
+/* Main content */
+.offre-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--offre1-noir) 0%, var(--offre1-bordeaux) 100%);
+    border-bottom: 3px solid var(--offre1-or);
+    position: relative;
+}
+
+.offre-hero::before,
+.offre-hero::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--offre1-or), transparent);
+    left: 10%;
+    right: 10%;
+}
+
+.offre-hero::before {
+    top: 2rem;
+}
+
+.offre-hero::after {
+    bottom: 2rem;
+}
+
+.offre-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--offre1-or);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.offre-hero .subtitle {
+    font-size: 1.5rem;
+    color: var(--offre1-creme);
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+/* Frises géométriques Art Déco */
+.art-deco-border {
+    border: 2px solid var(--offre1-or);
+    border-left: 10px solid var(--offre1-or);
+    border-right: 10px solid var(--offre1-or);
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 900px;
+    position: relative;
+    background-color: rgba(26, 26, 26, 0.8);
+}
+
+.art-deco-border::before,
+.art-deco-border::after {
+    content: '◆';
+    position: absolute;
+    color: var(--offre1-or);
+    font-size: 2rem;
+}
+
+.art-deco-border::before {
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.art-deco-border::after {
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Introduction */
+.offre-intro {
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Playlist section */
+.playlist-section {
+    padding: 3rem 2rem;
+}
+
+.playlist-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--offre1-or);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.song-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.song-item {
+    background: linear-gradient(135deg, rgba(107, 39, 55, 0.3) 0%, rgba(26, 26, 26, 0.8) 100%);
+    border: 2px solid var(--offre1-or);
+    border-radius: 5px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.song-item:hover {
+    transform: translateX(10px);
+    box-shadow: -5px 5px 15px rgba(212, 175, 55, 0.3);
+    border-left: 10px solid var(--offre1-or);
+}
+
+.song-item.playing {
+    background: linear-gradient(135deg, var(--offre1-bordeaux) 0%, var(--offre1-noir) 100%);
+    border: 3px solid var(--offre1-or);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.song-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--offre1-or);
+    min-width: 50px;
+    text-align: center;
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--offre1-creme);
+    margin-bottom: 0.3rem;
+}
+
+.song-duration {
+    font-size: 0.9rem;
+    color: var(--offre1-or);
+    font-style: italic;
+}
+
+.play-icon {
+    font-size: 2rem;
+    color: var(--offre1-or);
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Decorative elements */
+.deco-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--offre1-or), transparent);
+    margin: 3rem auto;
+    max-width: 600px;
+}
+
+/* Buttons */
+.offre1-btn {
+    padding: 1rem 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--offre1-or);
+    border: 2px solid var(--offre1-or);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.offre1-btn:hover {
+    background-color: var(--offre1-or);
+    color: var(--offre1-noir);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Footer */
+footer {
+    background-color: var(--offre1-noir);
+    border-top: 2px solid var(--offre1-or);
+    color: var(--offre1-creme);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .offre-hero h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+    
+    .offre-hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .art-deco-border {
+        padding: 2rem 1rem;
+        margin: 2rem 1rem;
+    }
+    
+    .playlist-section h2 {
+        font-size: 2rem;
+    }
+    
+    .song-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .song-number {
+        font-size: 1.5rem;
+    }
+}

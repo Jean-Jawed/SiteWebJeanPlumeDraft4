@@ -153,3 +153,106 @@ if (contactForm) {
         }
     });
 }
+
+// === NOUVELLES ANIMATIONS ESTHÉTIQUES ===
+
+// Initialisation des animations supplémentaires
+document.addEventListener('DOMContentLoaded', function() {
+    initCustomCursor();
+    initParallax();
+    initScrollReveal();
+    initSplitText();
+});
+
+// 1. Curseur Personnalisé
+function initCustomCursor() {
+    const cursor = document.querySelector('.cursor');
+    const follower = document.querySelector('.cursor-follower');
+    
+    if (!cursor || !follower) return;
+
+    // Désactiver sur mobile tactile
+    if(window.matchMedia("(pointer: coarse)").matches) {
+        cursor.style.display = 'none';
+        follower.style.display = 'none';
+        return;
+    }
+
+    let posX = 0, posY = 0;
+    let mouseX = 0, mouseY = 0;
+
+    // Animation fluide du follower
+    setInterval(function() {
+        posX += (mouseX - posX) / 6;
+        posY += (mouseY - posY) / 6;
+        follower.style.left = posX + 'px';
+        follower.style.top = posY + 'px';
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    }, 16);
+
+    document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    // Effet sur les liens et boutons
+    const links = document.querySelectorAll('a, button, .offre-btn');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('active');
+            follower.classList.add('active');
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('active');
+            follower.classList.remove('active');
+        });
+    });
+}
+
+// 2. Parallax
+function initParallax() {
+    const heroImg = document.querySelector('.hero img');
+    if (!heroImg) return;
+    
+    window.addEventListener('scroll', () => {
+        let scrollValue = window.scrollY;
+        // Limiter le translateY pour éviter que l'image ne sorte du cadre si elle est de taille fixe
+        heroImg.style.transform = `translateY(${scrollValue * 0.4}px)`;
+    });
+}
+
+// 3. Scroll Reveal (Intersection Observer)
+function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(reveal => {
+        observer.observe(reveal);
+    });
+}
+
+// 4. Split Text Effect (Dancing Letters)
+function initSplitText() {
+    const h1 = document.querySelector('.hero h1');
+    if (!h1) return;
+    
+    const text = h1.textContent;
+    h1.textContent = '';
+    
+    for(let i = 0; i < text.length; i++) {
+        let span = document.createElement('span');
+        span.textContent = text[i] === ' ' ? '\u00A0' : text[i];
+        span.style.animationDelay = `${i * 0.1}s`;
+        span.className = 'dancing-letter';
+        h1.appendChild(span);
+    }
+}
+
